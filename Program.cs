@@ -4,9 +4,11 @@ using System.Collections.Generic;
 
 List<string> tasks = new();
 
+// Список задач хранится в памяти программы.
+
 while (true)
 {
-    Console.WriteLine("\n=== Task Tracker ===");
+    Console.WriteLine("\n=== Console.WriteLine("\n=== Личный список задач ==="); ===");
     Console.WriteLine("1. Показать задачи");
     Console.WriteLine("2. Добавить задачу");
     Console.WriteLine("3. Удалить задачу");
