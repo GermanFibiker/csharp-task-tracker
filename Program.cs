@@ -8,7 +8,7 @@ List<string> tasks = new();
 
 while (true)
 {
-    Console.WriteLine("\n=== Console.WriteLine("\n=== Личный список задач ==="); ===");
+    Console.WriteLine("\n=== Личный список задач ===");
     Console.WriteLine("1. Показать задачи");
     Console.WriteLine("2. Добавить задачу");
     Console.WriteLine("3. Удалить задачу");
