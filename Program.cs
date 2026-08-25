@@ -11,8 +11,9 @@ while (true)
     Console.WriteLine("\n=== Личный список задач ===");
     Console.WriteLine("1. Показать задачи");
     Console.WriteLine("2. Добавить задачу");
-    Console.WriteLine("3. Удалить задачу");
-    Console.WriteLine("4. Выход");
+    Console.WriteLine("3. Отметить задачу выполненной");
+    Console.WriteLine("4. Удалить задачу");
+    Console.WriteLine("5. Выход");
     Console.Write("Выбор: ");
 
     string? choice = Console.ReadLine();
@@ -38,7 +39,7 @@ while (true)
                 tasks.Add(task);
             break;
 
-        case "3":
+        case "4":
             Console.Write("Номер задачи: ");
             if (int.TryParse(Console.ReadLine(), out int index) &&
                 index > 0 &&
@@ -47,8 +48,18 @@ while (true)
                 tasks.RemoveAt(index - 1);
             }
             break;
+case "3":
+    Console.Write("Номер выполненной задачи: ");
 
-        case "4":
+    if (int.TryParse(Console.ReadLine(), out int doneIndex) &&
+        doneIndex > 0 &&
+        doneIndex <= tasks.Count)
+    {
+        tasks[doneIndex - 1] = "✓ " + tasks[doneIndex - 1];
+    }
+    break;
+
+        case "5":
             return;
     }
 }
